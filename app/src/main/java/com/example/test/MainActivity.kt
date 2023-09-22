@@ -59,11 +59,11 @@ class MainActivity : AppCompatActivity() {
 
         binding.butApply.setOnClickListener {
 
-            val name = binding.edittext1.text.toString()
+            val firstName = binding.edittext1.text.toString()
             val lastName = binding.edittext2.text.toString()
             val age = binding.edittext3.text.toString().toInt()
 
-            val person = Person(name, lastName, age)
+            val person = Person(age = age,name = firstName, lastName = lastName)
 
             Intent(this, ActivitySecond::class.java).also {
 
