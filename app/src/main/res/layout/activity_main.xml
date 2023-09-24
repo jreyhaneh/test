@@ -5,8 +5,22 @@
     android:id="@+id/ac_main_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E3B7FA"
+    android:background="#7D7C7E"
     tools:context=".MainActivity">
+
+    <!--xoxo-->
+    <ImageView
+        android:id="@+id/ImView"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:background="#787344"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--xoxo-->
 
     <LinearLayout
         android:id="@+id/linear1"
@@ -50,7 +64,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#FEBA33"
-                android:imeOptions="actionNext"
+
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
@@ -79,7 +93,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#FDBE60"
-                android:imeOptions="actionNext"
                 android:inputType="number" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -96,7 +109,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#FAD58A"
-                android:imeOptions="actionNext"
+                android:imeOptions="actionPrevious"
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
@@ -125,7 +138,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#F8EACE"
-                android:imeOptions="actionNext"
+                android:imeOptions="actionDone"
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -162,6 +175,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linear3" />
+
+    <!--xoxo-->
+    <!--xoxo-->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="30dp"
+        android:background="#7FBBC3"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtvTest" />
 
     <RadioGroup
         android:id="@+id/radioG"
@@ -225,7 +253,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
+        android:background="#3F51B5"
         android:text="submit"
+        app:backgroundTint="@null"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/check3" />
 

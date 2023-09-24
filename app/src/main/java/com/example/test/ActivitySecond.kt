@@ -16,18 +16,19 @@ class ActivitySecond : AppCompatActivity() {
 
         val buttonBack = findViewById<Button>(R.id.butBack)
 
-//        val name = intent.getStringExtra("ExteraName")
+//        val name = intent.getStringExtra("ExteraName")                                         //**extra**//
 //        val lastName = intent.getStringExtra("ExteraLasetName")
 //        val age = intent.getIntExtra("ExteraAge", 0)
 //        val strFinally =
-//            "your name is $name and your last name is $lastName and you are $age years old."
+//            "your name is $name and your last name is $lastName and you are $age years old."  //**extra**//
 
-        val person: Person =intent.getSerializableExtra("Extra_person") as Person
+        val person: Person =
+            intent.getSerializableExtra("Extra_person") as Person                     //**data class**//
         binding.txview.text = "${person.name.toString()}"
 
         buttonBack.setOnClickListener {
 //            finish()
             onBackPressedDispatcher.onBackPressed()
-        }
+        }                                                                                     //**data class**//
     }
 }

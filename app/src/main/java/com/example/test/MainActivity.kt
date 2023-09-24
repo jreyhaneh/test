@@ -16,14 +16,14 @@ import com.example.test.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding    //binding
+    private lateinit var binding: ActivityMainBinding                      //**binding**//
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 //        setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(binding.root)                                     //**binding**//
 
-        val rg = findViewById<RadioGroup>(R.id.radioG)         //* //radioButton and checkBox
+        val rg = findViewById<RadioGroup>(R.id.radioG)           //**radioButton and checkBox**//
         val button = findViewById<Button>(R.id.button)
         val checkDark = findViewById<CheckBox>(R.id.check1)
         val checkLight = findViewById<CheckBox>(R.id.check2)
@@ -43,19 +43,20 @@ class MainActivity : AppCompatActivity() {
                     (if (light) "light\n" else "") +
                     (if (colorfull) "colorfull\n" else "")
 
-            textView.text = strFinally         //radioButton and checkBox
+            textView.text = strFinally                             //**radioButton and checkBox**//
         }
+
         ////////////////////////////////////////////////////////////////////
 
-//        val nextButton = findViewById<Button>(R.id.next) //nextactivity
+//        val nextButton = findViewById<Button>(R.id.next)                           //**nextactivity**//
 //        nextButton.setOnClickListener {
 //            // Toast.makeText(this, "hello world", Toast.LENGTH_LONG).show()  //Toast_1
 //            //  Toast.makeText(applicationContext, "hello world", Toast.LENGTH_LONG).show()  //Toast_2
 //
-//            Intent(this, ActivitySecond::class.java).also { //next activity
+//            Intent(this, ActivitySecond::class.java).also {
 //                startActivity(it)
 //            }
-//        }
+//        }                                                                          //**nextactivity**//
 
         binding.butApply.setOnClickListener {
 
@@ -63,20 +64,22 @@ class MainActivity : AppCompatActivity() {
             val lastName = binding.edittext2.text.toString()
             val age = binding.edittext3.text.toString().toInt()
 
-            val person = Person(age = age,name = firstName, lastName = lastName)
+            val person =
+                Person(age = age, name = firstName, lastName = lastName)    //**data class**//
 
-            Intent(this, ActivitySecond::class.java).also {
+            Intent(this, ActivitySecond::class.java).also {    //**next activity and extra**//
 
 //                it.putExtra("ExteraName", name)
 //                it.putExtra("ExteraLasetName", lastName)
 //                it.putExtra("ExterAge", age)
 
-                it.putExtra("Extra_person",person)
+                it.putExtra("Extra_person", person)
 
                 startActivity(it)
+
             }
 
-        }
+        }                                                                          //**next activity and extera**//
 
     }
 
