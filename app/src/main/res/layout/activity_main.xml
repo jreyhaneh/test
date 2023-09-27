@@ -109,6 +109,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#FAD58A"
+                android:nextFocusForward="@id/edittext5"
                 android:imeOptions="actionPrevious"
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>

@@ -29,9 +29,9 @@ class MainActivity : AppCompatActivity() {
         val checkLight = findViewById<CheckBox>(R.id.check2)
         val checkColorfull = findViewById<CheckBox>(R.id.check3)
         val textView = findViewById<TextView>(R.id.textview)
+        val t = findViewById<TextView>(R.id.tvTitle)
 
         button.setOnClickListener {
-
             val radioG = rg.checkedRadioButtonId             //*
             val color = findViewById<RadioButton>(radioG)   //*
             val dark = checkDark.isChecked
@@ -75,11 +75,12 @@ class MainActivity : AppCompatActivity() {
 
                 it.putExtra("Extra_person", person)
 
-                startActivity(it)
+                startActivity(it)                                             //**next activity and extera**//
 
             }
 
-        }                                                                          //**next activity and extera**//
+
+        }
 
     }
 
